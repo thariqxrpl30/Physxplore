@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/teal_200">
+
+    <TextView
+        android:id="@+id/laboratorium_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SOAL"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Search Bar -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/laboratorium_title">
+
+    </RelativeLayout>
+
+    <!-- Frame untuk Icon Menu dan Materi List -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="1dp"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.6">
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Latihan Gerak dan Kinemanika"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:layout_width="244dp"
+            android:layout_height="162dp"
+            android:layout_gravity="center"
+            android:src="@drawable/hs1"/>
+
+        <ScrollView
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+            app:layout_constraintBottom_toTopOf="@id/footer"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Opsi Peningkatan"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:textColor="@android:color/black" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diagram dan Grafik :\n - Kemampuan untuk Membaca dan \n   menggambar grafik P-V, T-S dan \n   diagram Fase"
+                    android:textSize="24dp"
+                    android:justificationMode="inter_word"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/home"
+            android:contentDescription="Home Icon"
+            android:layout_margin="22dp" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/search"
+            android:contentDescription="Search Icon"
+            android:layout_margin="22dp" />
+
+        <ImageView
+            android:id="@+id/chat_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/chat"
+            android:contentDescription="Chat Icon"
+            android:layout_margin="22dp" />
+
+        <ImageView
+            android:id="@+id/settings_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="22dp"
+            android:src="@drawable/settings"
+            android:contentDescription="Settings Icon" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

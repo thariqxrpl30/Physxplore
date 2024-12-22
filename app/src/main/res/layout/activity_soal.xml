@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/teal_200">
+
+    <TextView
+        android:id="@+id/laboratorium_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BANK SOAL"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Search Bar -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/laboratorium_title">
+
+        <!-- EditText (Search Bar) -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_background"
+            android:hint="Cari Soal"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:padding="12dp"
+            android:theme="@style/CustomEditText"/>
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Search Button"
+            android:src="@android:drawable/ic_menu_search"
+            android:tint="@android:color/black" />
+    </RelativeLayout>
+
+    <!-- Frame untuk Icon Menu dan Materi List -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="1dp"
+        app:layout_constraintBottom_toTopOf="@id/footer"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.6">
+
+        <!-- Icon Menu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/Video"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_background"
+                android:scaleType="centerInside"
+                android:src="@drawable/video" />
+
+            <ImageView
+                android:id="@+id/Book"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_background"
+                android:scaleType="centerInside"
+                android:src="@drawable/book" />
+
+            <ImageView
+                android:id="@+id/Labolatorium"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_background"
+                android:scaleType="centerInside"
+                android:src="@drawable/labolatorium" />
+
+            <ImageView
+                android:id="@+id/Bank"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_background"
+                android:scaleType="centerInside"
+                android:src="@drawable/bank" />
+
+            <ImageView
+                android:id="@+id/Pesan"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_background"
+                android:scaleType="centerInside"
+                android:src="@drawable/pesan" />
+
+        </LinearLayout>
+
+        <!-- Materi List -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:id="@+id/materi_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Tombol Gerak dan Kinematika -->
+                <Button
+                    android:id="@+id/soal1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="Soal dan Pembahasan Gerak dan Kinematika"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/yellow"
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="18sp"
+                    android:autoSizeStepGranularity="1sp" />
+
+
+                <!-- Tombol Gaya dan Dinamika -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="Soal dan Pembahasan Gaya dan Dinamika"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/teal_200"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="18sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+                <!-- Tombol Energi -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="Soal dan Pembahasan Energi"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/green"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="18sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+                <!-- Tombol Gelombang dan Suara -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="Soal dan Pembahasan Gelombang dan Suara"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/red"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="18sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+                <!-- Tombol Termodinamika -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="Soal dan Pembahasan Termodinamika"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/orange"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="18sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+                <!-- Tombol Optik -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="Soal dan Pembahasan Optik"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/light_green"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="18sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+                <!-- Tombol Kelistrikan -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="Soal dan Pembahasan Kelistrikan"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/blue"
+                    android:layout_margin="8dp"
+                    android:padding="12dp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="18sp"
+                    android:autoSizeStepGranularity="1sp"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/home"
+            android:contentDescription="Home Icon"
+            android:layout_margin="22dp" />
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/search"
+            android:contentDescription="Search Icon"
+            android:layout_margin="22dp" />
+
+        <ImageView
+            android:id="@+id/chat_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/chat"
+            android:contentDescription="Chat Icon"
+            android:layout_margin="22dp" />
+
+        <ImageView
+            android:id="@+id/settings_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="22dp"
+            android:src="@drawable/settings"
+            android:contentDescription="Settings Icon" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

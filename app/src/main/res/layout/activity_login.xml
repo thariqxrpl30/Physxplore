@@ -1,0 +1,148 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/teal_200">
+
+    <!-- Logo -->
+
+    <!-- Frame (Background Putih dan Rounded Rectangle) -->
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="281dp"
+        android:layout_height="252dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="388dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+
+        android:background="@drawable/rounded_background"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Tabs (Masuk & Daftar) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/MasukButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_selected"
+                android:text="Masuk"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"
+                app:backgroundTint="@null"/>
+
+
+            <Button
+                android:id="@+id/DaftarButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/tab_unselected"
+                android:text="Daftar"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:gravity="center"
+                app:backgroundTint="@null"/>
+        </LinearLayout>
+
+        <!-- Input Fields -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_background"
+            android:hint="Nomor telepon atau email"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:padding="12dp"
+            android:theme="@style/CustomEditText" />
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/input_background"
+            android:hint="Password"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:padding="12dp"
+            android:theme="@style/CustomEditText" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="150dp"
+            android:background="@drawable/button_background"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:text="Masuk"
+            android:textColor="@color/white"
+            android:layout_marginBottom="23dp"
+            app:backgroundTint="@null"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/input_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <!-- Ikon Facebook -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:contentDescription="Facebook"
+                android:src="@drawable/facebook" />
+
+            <!-- Ikon Twitter -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:contentDescription="Twitter"
+                android:src="@drawable/twitter" />
+
+            <!-- Ikon Instagram -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:contentDescription="Instagram"
+                android:src="@drawable/instagram" />
+
+            <!-- Ikon LinkedIn -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:contentDescription="LinkedIn"
+                android:src="@drawable/youtube" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
